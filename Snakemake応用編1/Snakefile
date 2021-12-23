@@ -1,0 +1,38 @@
+from os.path import join
+
+
+WIKI_PAGE_TITLE = ["Sapporo", "Otaru", "Hakodate", "Asahikawa", "Kushiro", "Shiretoko_Peninsula"]
+TEXT_DATA = join("data", "wiki_text_data={data}.txt")
+WORD_COUNT_DATA = join("data", "word_count_data={data}.csv")
+WORD_COUNT_FIG = join("figs", "word_count_data={data}.pdf")
+
+
+rule all:
+    input:
+        expand(WORD_COUNT_FIG, data=WIKI_PAGE_TITLE)
+
+rule retrieve_wiki_text:
+    output:
+        TEXT_DATA
+    params:
+        data = lambda wildcards:wildcards.data 
+    shell:
+        "python workflow/get-wikipages.py {params.data} {output}"
+
+
+rule word_count:
+    input:
+        TEXT_DATA
+    output:
+        WORD_COUNT_DATA
+    shell:
+        "python workflow/count-words.py {input} {output}"
+
+
+rule plot_word_count:
+    input:
+        WORD_COUNT_DATA
+    output:
+        WORD_COUNT_FIG
+    shell:
+        "python workflow/plot-word-frequency.py {input} {output}"

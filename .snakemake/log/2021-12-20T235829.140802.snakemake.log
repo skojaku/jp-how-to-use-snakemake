@@ -1,0 +1,3 @@
+CreateRuleException in line 21 of /Users/skojaku-admin/program/code/jp-how-to-use-snakemake/Snakefile:
+The name retrieve_wiki_text is already used by another rule
+  File "/Users/skojaku-admin/program/code/jp-how-to-use-snakemake/Snakefile", line 21, in <module>

@@ -1,0 +1,56 @@
+from os.path import join
+
+#
+# Raw data
+#
+WIKI_PAGE_TITLE = [
+    "Sapporo",
+    "Otaru",
+]
+
+#
+# Preprocessed data
+#
+TEXT_DATA = join("data", "wiki_text_wikititle={wikititle}.txt")
+SUMMARIZED_TEXT = join(
+    "data", "summary_wikititle={wikititle}_model={model}_len={max_length}.csv"
+)
+
+
+#
+# Model & Parameters
+#
+# see https://huggingface.co/models?pipeline_tag=summarization&sort=downloads
+MODEL_LIST = ["t5-base", "t5-small"]
+MAX_LENGTH_LIST = [32, 64]  # Length of the summarized text
+
+
+rule all:
+    input:
+        expand(
+            SUMMARIZED_TEXT,
+            wikititle=WIKI_PAGE_TITLE,
+            model=MODEL_LIST,
+            max_length=MAX_LENGTH_LIST,
+        ),
+
+
+rule retrieve_wiki_text:
+    output:
+        output_file=TEXT_DATA,
+    params:
+        wikititle=lambda wildcards: wildcards.wikititle,
+    script:
+        "workflow/get-wikipages.py"
+
+
+rule summary:
+    input:
+        input_file=TEXT_DATA,
+    output:
+        output_file=SUMMARIZED_TEXT,
+    params:
+        max_length=lambda wildcards: wildcards.max_length,
+        model=lambda wildcards: wildcards.model,
+    script:
+        "workflow/summarize.py"

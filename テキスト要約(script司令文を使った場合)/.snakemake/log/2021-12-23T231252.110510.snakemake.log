@@ -1,0 +1,34 @@
+Building DAG of jobs...
+Using shell: /usr/local/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                   count    min threads    max threads
+------------------  -------  -------------  -------------
+all                       1              1              1
+retrieve_wiki_text        2              1              1
+summary                   8              1              1
+total                    11              1              1
+
+Select jobs to execute...
+
+[Thu Dec 23 23:12:52 2021]
+rule retrieve_wiki_text:
+    output: data/wiki_text_wikititle=Otaru.txt
+    jobid: 7
+    wildcards: wikititle=Otaru
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Thu Dec 23 23:12:53 2021]
+Error in rule retrieve_wiki_text:
+    jobid: 7
+    output: data/wiki_text_wikititle=Otaru.txt
+
+RuleException:
+CalledProcessError in line 44 of /Users/skojaku-admin/program/code/jp-how-to-use-snakemake/Snakemake応用編2(改)/Snakefile:
+Command 'set -euo pipefail;  /Users/skojaku-admin/opt/anaconda3/envs/blog/bin/python3.7 '/Users/skojaku-admin/program/code/jp-how-to-use-snakemake/Snakemake応用編2(改)/.snakemake/scripts/tmpw0d4vvdp.get-wikipages.py'' returned non-zero exit status 1.
+  File "/Users/skojaku-admin/program/code/jp-how-to-use-snakemake/Snakemake応用編2(改)/Snakefile", line 44, in __rule_retrieve_wiki_text
+  File "/Users/skojaku-admin/opt/anaconda3/envs/blog/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /Users/skojaku-admin/program/code/jp-how-to-use-snakemake/Snakemake応用編2(改)/.snakemake/log/2021-12-23T231252.110510.snakemake.log

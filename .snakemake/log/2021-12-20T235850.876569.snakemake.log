@@ -1,0 +1,4 @@
+Building DAG of jobs...
+MissingInputException in line 10 of /Users/skojaku-admin/program/code/jp-how-to-use-snakemake/Snakefile:
+Missing input files for rule all:
+figs/word_count.pdf

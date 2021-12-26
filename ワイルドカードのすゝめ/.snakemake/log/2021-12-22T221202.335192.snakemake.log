@@ -1,0 +1,253 @@
+Building DAG of jobs...
+Using shell: /usr/local/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                   count    min threads    max threads
+------------------  -------  -------------  -------------
+all                       1              1              1
+plot_word_count           6              1              1
+retrieve_wiki_text        6              1              1
+word_count                6              1              1
+total                    19              1              1
+
+Select jobs to execute...
+
+[Wed Dec 22 22:12:03 2021]
+rule retrieve_wiki_text:
+    output: data/wiki_text_data=Asahikawa.txt
+    jobid: 12
+    wildcards: data=Asahikawa
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Wed Dec 22 22:12:04 2021]
+Finished job 12.
+1 of 19 steps (5%) done
+Select jobs to execute...
+
+[Wed Dec 22 22:12:04 2021]
+rule retrieve_wiki_text:
+    output: data/wiki_text_data=Sapporo.txt
+    jobid: 3
+    wildcards: data=Sapporo
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Wed Dec 22 22:12:04 2021]
+Finished job 3.
+2 of 19 steps (11%) done
+Select jobs to execute...
+
+[Wed Dec 22 22:12:04 2021]
+rule word_count:
+    input: data/wiki_text_data=Sapporo.txt
+    output: data/word_count_data=Sapporo.csv
+    jobid: 2
+    wildcards: data=Sapporo
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Wed Dec 22 22:12:05 2021]
+Finished job 2.
+3 of 19 steps (16%) done
+Select jobs to execute...
+
+[Wed Dec 22 22:12:05 2021]
+rule plot_word_count:
+    input: data/word_count_data=Sapporo.csv
+    output: figs/word_count_data=Sapporo.pdf
+    jobid: 1
+    wildcards: data=Sapporo
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Wed Dec 22 22:12:08 2021]
+Finished job 1.
+4 of 19 steps (21%) done
+Select jobs to execute...
+
+[Wed Dec 22 22:12:08 2021]
+rule retrieve_wiki_text:
+    output: data/wiki_text_data=Kushiro.txt
+    jobid: 15
+    wildcards: data=Kushiro
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Wed Dec 22 22:12:08 2021]
+Finished job 15.
+5 of 19 steps (26%) done
+Select jobs to execute...
+
+[Wed Dec 22 22:12:09 2021]
+rule word_count:
+    input: data/wiki_text_data=Kushiro.txt
+    output: data/word_count_data=Kushiro.csv
+    jobid: 14
+    wildcards: data=Kushiro
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Wed Dec 22 22:12:09 2021]
+Finished job 14.
+6 of 19 steps (32%) done
+Select jobs to execute...
+
+[Wed Dec 22 22:12:09 2021]
+rule plot_word_count:
+    input: data/word_count_data=Kushiro.csv
+    output: figs/word_count_data=Kushiro.pdf
+    jobid: 13
+    wildcards: data=Kushiro
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Wed Dec 22 22:12:11 2021]
+Finished job 13.
+7 of 19 steps (37%) done
+Select jobs to execute...
+
+[Wed Dec 22 22:12:11 2021]
+rule retrieve_wiki_text:
+    output: data/wiki_text_data=Hakodate.txt
+    jobid: 9
+    wildcards: data=Hakodate
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Wed Dec 22 22:12:12 2021]
+Finished job 9.
+8 of 19 steps (42%) done
+Select jobs to execute...
+
+[Wed Dec 22 22:12:12 2021]
+rule word_count:
+    input: data/wiki_text_data=Hakodate.txt
+    output: data/word_count_data=Hakodate.csv
+    jobid: 8
+    wildcards: data=Hakodate
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Wed Dec 22 22:12:12 2021]
+Finished job 8.
+9 of 19 steps (47%) done
+Select jobs to execute...
+
+[Wed Dec 22 22:12:12 2021]
+rule plot_word_count:
+    input: data/word_count_data=Hakodate.csv
+    output: figs/word_count_data=Hakodate.pdf
+    jobid: 7
+    wildcards: data=Hakodate
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Wed Dec 22 22:12:15 2021]
+Finished job 7.
+10 of 19 steps (53%) done
+Select jobs to execute...
+
+[Wed Dec 22 22:12:15 2021]
+rule retrieve_wiki_text:
+    output: data/wiki_text_data=Otaru.txt
+    jobid: 6
+    wildcards: data=Otaru
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Wed Dec 22 22:12:15 2021]
+Finished job 6.
+11 of 19 steps (58%) done
+Select jobs to execute...
+
+[Wed Dec 22 22:12:15 2021]
+rule word_count:
+    input: data/wiki_text_data=Asahikawa.txt
+    output: data/word_count_data=Asahikawa.csv
+    jobid: 11
+    wildcards: data=Asahikawa
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Wed Dec 22 22:12:15 2021]
+Finished job 11.
+12 of 19 steps (63%) done
+Select jobs to execute...
+
+[Wed Dec 22 22:12:16 2021]
+rule plot_word_count:
+    input: data/word_count_data=Asahikawa.csv
+    output: figs/word_count_data=Asahikawa.pdf
+    jobid: 10
+    wildcards: data=Asahikawa
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Wed Dec 22 22:12:18 2021]
+Finished job 10.
+13 of 19 steps (68%) done
+Select jobs to execute...
+
+[Wed Dec 22 22:12:18 2021]
+rule retrieve_wiki_text:
+    output: data/wiki_text_data=Shiretoko_Peninsula.txt
+    jobid: 18
+    wildcards: data=Shiretoko_Peninsula
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Wed Dec 22 22:12:18 2021]
+Finished job 18.
+14 of 19 steps (74%) done
+Select jobs to execute...
+
+[Wed Dec 22 22:12:18 2021]
+rule word_count:
+    input: data/wiki_text_data=Otaru.txt
+    output: data/word_count_data=Otaru.csv
+    jobid: 5
+    wildcards: data=Otaru
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Wed Dec 22 22:12:19 2021]
+Finished job 5.
+15 of 19 steps (79%) done
+Select jobs to execute...
+
+[Wed Dec 22 22:12:19 2021]
+rule plot_word_count:
+    input: data/word_count_data=Otaru.csv
+    output: figs/word_count_data=Otaru.pdf
+    jobid: 4
+    wildcards: data=Otaru
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Wed Dec 22 22:12:21 2021]
+Finished job 4.
+16 of 19 steps (84%) done
+Select jobs to execute...
+
+[Wed Dec 22 22:12:21 2021]
+rule word_count:
+    input: data/wiki_text_data=Shiretoko_Peninsula.txt
+    output: data/word_count_data=Shiretoko_Peninsula.csv
+    jobid: 17
+    wildcards: data=Shiretoko_Peninsula
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Wed Dec 22 22:12:22 2021]
+Finished job 17.
+17 of 19 steps (89%) done
+Select jobs to execute...
+
+[Wed Dec 22 22:12:22 2021]
+rule plot_word_count:
+    input: data/word_count_data=Shiretoko_Peninsula.csv
+    output: figs/word_count_data=Shiretoko_Peninsula.pdf
+    jobid: 16
+    wildcards: data=Shiretoko_Peninsula
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Wed Dec 22 22:12:24 2021]
+Finished job 16.
+18 of 19 steps (95%) done
+Select jobs to execute...
+
+[Wed Dec 22 22:12:24 2021]
+localrule all:
+    input: figs/word_count_data=Sapporo.pdf, figs/word_count_data=Otaru.pdf, figs/word_count_data=Hakodate.pdf, figs/word_count_data=Asahikawa.pdf, figs/word_count_data=Kushiro.pdf, figs/word_count_data=Shiretoko_Peninsula.pdf
+    jobid: 0
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Wed Dec 22 22:12:24 2021]
+Finished job 0.
+19 of 19 steps (100%) done
+Complete log: /Users/skojaku-admin/program/code/jp-how-to-use-snakemake/Snakemake応用編1/.snakemake/log/2021-12-22T221202.335192.snakemake.log

@@ -1,0 +1,355 @@
+Building DAG of jobs...
+Using shell: /usr/local/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                   count    min threads    max threads
+------------------  -------  -------------  -------------
+all                       1              1              1
+retrieve_wiki_text        3              1              1
+summary                  54              1              1
+total                    58              1              1
+
+Select jobs to execute...
+
+[Thu Dec 23 21:59:14 2021]
+rule summary:
+    input: data/wiki_text_wikititle=Kushiro.txt
+    output: data/summary_wikititle=Kushiro_model=t5-base_len=128.csv
+    jobid: 44
+    wildcards: wikititle=Kushiro, model=t5-base, max_length=128
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Thu Dec 23 21:59:33 2021]
+Finished job 44.
+1 of 58 steps (2%) done
+Select jobs to execute...
+
+[Thu Dec 23 21:59:33 2021]
+rule summary:
+    input: data/wiki_text_wikititle=Sapporo.txt
+    output: data/summary_wikititle=Sapporo_model=t5-small_len=64.csv
+    jobid: 6
+    wildcards: wikititle=Sapporo, model=t5-small, max_length=64
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Thu Dec 23 21:59:42 2021]
+Finished job 6.
+2 of 58 steps (3%) done
+Select jobs to execute...
+
+[Thu Dec 23 21:59:42 2021]
+rule summary:
+    input: data/wiki_text_wikititle=Otaru.txt
+    output: data/summary_wikititle=Otaru_model=sshleifer/distilbart-cnn-12-6_len=128.csv
+    jobid: 20
+    wildcards: wikititle=Otaru, model=sshleifer/distilbart-cnn-12-6, max_length=128
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Thu Dec 23 22:00:02 2021]
+Finished job 20.
+3 of 58 steps (5%) done
+Select jobs to execute...
+
+[Thu Dec 23 22:00:02 2021]
+rule summary:
+    input: data/wiki_text_wikititle=Kushiro.txt
+    output: data/summary_wikititle=Kushiro_model=sshleifer/distilbart-cnn-12-6_len=32.csv
+    jobid: 48
+    wildcards: wikititle=Kushiro, model=sshleifer/distilbart-cnn-12-6, max_length=32
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Thu Dec 23 22:00:17 2021]
+Finished job 48.
+4 of 58 steps (7%) done
+Select jobs to execute...
+
+[Thu Dec 23 22:00:17 2021]
+rule summary:
+    input: data/wiki_text_wikititle=Otaru.txt
+    output: data/summary_wikititle=Otaru_model=t5-base_len=128.csv
+    jobid: 14
+    wildcards: wikititle=Otaru, model=t5-base, max_length=128
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Thu Dec 23 22:00:40 2021]
+Finished job 14.
+5 of 58 steps (9%) done
+Select jobs to execute...
+
+[Thu Dec 23 22:00:40 2021]
+rule summary:
+    input: data/wiki_text_wikititle=Sapporo.txt
+    output: data/summary_wikititle=Sapporo_model=t5-small_len=128.csv
+    jobid: 7
+    wildcards: wikititle=Sapporo, model=t5-small, max_length=128
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Thu Dec 23 22:00:52 2021]
+Finished job 7.
+6 of 58 steps (10%) done
+Select jobs to execute...
+
+[Thu Dec 23 22:00:52 2021]
+rule summary:
+    input: data/wiki_text_wikititle=Kushiro.txt
+    output: data/summary_wikititle=Kushiro_model=sshleifer/distilbart-cnn-12-6_len=64.csv
+    jobid: 49
+    wildcards: wikititle=Kushiro, model=sshleifer/distilbart-cnn-12-6, max_length=64
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Thu Dec 23 22:01:09 2021]
+Finished job 49.
+7 of 58 steps (12%) done
+Select jobs to execute...
+
+[Thu Dec 23 22:01:09 2021]
+rule summary:
+    input: data/wiki_text_wikititle=Sapporo.txt
+    output: data/summary_wikititle=Sapporo_model=t5-base_len=32.csv
+    jobid: 1
+    wildcards: wikititle=Sapporo, model=t5-base, max_length=32
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Thu Dec 23 22:01:24 2021]
+Finished job 1.
+8 of 58 steps (14%) done
+Select jobs to execute...
+
+[Thu Dec 23 22:01:24 2021]
+rule summary:
+    input: data/wiki_text_wikititle=Otaru.txt
+    output: data/summary_wikititle=Otaru_model=t5-small_len=32.csv
+    jobid: 15
+    wildcards: wikititle=Otaru, model=t5-small, max_length=32
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Thu Dec 23 22:01:34 2021]
+Finished job 15.
+9 of 58 steps (16%) done
+Select jobs to execute...
+
+[Thu Dec 23 22:01:34 2021]
+rule summary:
+    input: data/wiki_text_wikititle=Kushiro.txt
+    output: data/summary_wikititle=Kushiro_model=t5-base_len=64.csv
+    jobid: 43
+    wildcards: wikititle=Kushiro, model=t5-base, max_length=64
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Thu Dec 23 22:01:52 2021]
+Finished job 43.
+10 of 58 steps (17%) done
+Select jobs to execute...
+
+[Thu Dec 23 22:01:52 2021]
+rule summary:
+    input: data/wiki_text_wikititle=Sapporo.txt
+    output: data/summary_wikititle=Sapporo_model=sshleifer/distilbart-cnn-12-6_len=32.csv
+    jobid: 8
+    wildcards: wikititle=Sapporo, model=sshleifer/distilbart-cnn-12-6, max_length=32
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Thu Dec 23 22:02:09 2021]
+Finished job 8.
+11 of 58 steps (19%) done
+Select jobs to execute...
+
+[Thu Dec 23 22:02:09 2021]
+rule summary:
+    input: data/wiki_text_wikititle=Kushiro.txt
+    output: data/summary_wikititle=Kushiro_model=sshleifer/distilbart-cnn-12-6_len=128.csv
+    jobid: 50
+    wildcards: wikititle=Kushiro, model=sshleifer/distilbart-cnn-12-6, max_length=128
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Thu Dec 23 22:02:28 2021]
+Finished job 50.
+12 of 58 steps (21%) done
+Select jobs to execute...
+
+[Thu Dec 23 22:02:28 2021]
+rule summary:
+    input: data/wiki_text_wikititle=Sapporo.txt
+    output: data/summary_wikititle=Sapporo_model=sshleifer/distilbart-cnn-12-6_len=128.csv
+    jobid: 10
+    wildcards: wikititle=Sapporo, model=sshleifer/distilbart-cnn-12-6, max_length=128
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Thu Dec 23 22:02:48 2021]
+Finished job 10.
+13 of 58 steps (22%) done
+Select jobs to execute...
+
+[Thu Dec 23 22:02:48 2021]
+rule retrieve_wiki_text:
+    output: data/wiki_text_wikititle=Shiretoko_Peninsula.txt
+    jobid: 52
+    wildcards: wikititle=Shiretoko_Peninsula
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Thu Dec 23 22:02:49 2021]
+Finished job 52.
+14 of 58 steps (24%) done
+Select jobs to execute...
+
+[Thu Dec 23 22:02:49 2021]
+rule summary:
+    input: data/wiki_text_wikititle=Otaru.txt
+    output: data/summary_wikititle=Otaru_model=t5-base_len=64.csv
+    jobid: 13
+    wildcards: wikititle=Otaru, model=t5-base, max_length=64
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Thu Dec 23 22:03:11 2021]
+Finished job 13.
+15 of 58 steps (26%) done
+Select jobs to execute...
+
+[Thu Dec 23 22:03:11 2021]
+rule summary:
+    input: data/wiki_text_wikititle=Shiretoko_Peninsula.txt
+    output: data/summary_wikititle=Shiretoko_Peninsula_model=t5-small_len=32.csv
+    jobid: 55
+    wildcards: wikititle=Shiretoko_Peninsula, model=t5-small, max_length=32
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Thu Dec 23 22:03:21 2021]
+Finished job 55.
+16 of 58 steps (28%) done
+Select jobs to execute...
+
+[Thu Dec 23 22:03:21 2021]
+rule summary:
+    input: data/wiki_text_wikititle=Kushiro.txt
+    output: data/summary_wikititle=Kushiro_model=t5-base_len=32.csv
+    jobid: 41
+    wildcards: wikititle=Kushiro, model=t5-base, max_length=32
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Thu Dec 23 22:03:59 2021]
+Finished job 41.
+17 of 58 steps (29%) done
+Select jobs to execute...
+
+[Thu Dec 23 22:03:59 2021]
+rule summary:
+    input: data/wiki_text_wikititle=Shiretoko_Peninsula.txt
+    output: data/summary_wikititle=Shiretoko_Peninsula_model=t5-small_len=64.csv
+    jobid: 56
+    wildcards: wikititle=Shiretoko_Peninsula, model=t5-small, max_length=64
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Thu Dec 23 22:04:09 2021]
+Finished job 56.
+18 of 58 steps (31%) done
+Select jobs to execute...
+
+[Thu Dec 23 22:04:09 2021]
+rule summary:
+    input: data/wiki_text_wikititle=Otaru.txt
+    output: data/summary_wikititle=Otaru_model=t5-base_len=32.csv
+    jobid: 11
+    wildcards: wikititle=Otaru, model=t5-base, max_length=32
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Thu Dec 23 22:04:23 2021]
+Finished job 11.
+19 of 58 steps (33%) done
+Select jobs to execute...
+
+[Thu Dec 23 22:04:23 2021]
+rule summary:
+    input: data/wiki_text_wikititle=Shiretoko_Peninsula.txt
+    output: data/summary_wikititle=Shiretoko_Peninsula_model=t5-small_len=128.csv
+    jobid: 57
+    wildcards: wikititle=Shiretoko_Peninsula, model=t5-small, max_length=128
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Thu Dec 23 22:04:35 2021]
+Finished job 57.
+20 of 58 steps (34%) done
+Select jobs to execute...
+
+[Thu Dec 23 22:04:35 2021]
+rule retrieve_wiki_text:
+    output: data/wiki_text_wikititle=Hakodate.txt
+    jobid: 22
+    wildcards: wikititle=Hakodate
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Thu Dec 23 22:04:35 2021]
+Finished job 22.
+21 of 58 steps (36%) done
+Select jobs to execute...
+
+[Thu Dec 23 22:04:35 2021]
+rule summary:
+    input: data/wiki_text_wikititle=Kushiro.txt
+    output: data/summary_wikititle=Kushiro_model=t5-small_len=128.csv
+    jobid: 47
+    wildcards: wikititle=Kushiro, model=t5-small, max_length=128
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Thu Dec 23 22:04:45 2021]
+Finished job 47.
+22 of 58 steps (38%) done
+Select jobs to execute...
+
+[Thu Dec 23 22:04:45 2021]
+rule summary:
+    input: data/wiki_text_wikititle=Hakodate.txt
+    output: data/summary_wikititle=Hakodate_model=t5-small_len=128.csv
+    jobid: 27
+    wildcards: wikititle=Hakodate, model=t5-small, max_length=128
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Thu Dec 23 22:04:57 2021]
+Finished job 27.
+23 of 58 steps (40%) done
+Select jobs to execute...
+
+[Thu Dec 23 22:04:57 2021]
+rule summary:
+    input: data/wiki_text_wikititle=Hakodate.txt
+    output: data/summary_wikititle=Hakodate_model=sshleifer/distilbart-cnn-12-6_len=32.csv
+    jobid: 28
+    wildcards: wikititle=Hakodate, model=sshleifer/distilbart-cnn-12-6, max_length=32
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Thu Dec 23 22:05:14 2021]
+Finished job 28.
+24 of 58 steps (41%) done
+Select jobs to execute...
+
+[Thu Dec 23 22:05:14 2021]
+rule summary:
+    input: data/wiki_text_wikititle=Hakodate.txt
+    output: data/summary_wikititle=Hakodate_model=t5-base_len=32.csv
+    jobid: 21
+    wildcards: wikititle=Hakodate, model=t5-base, max_length=32
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Thu Dec 23 22:05:29 2021]
+Finished job 21.
+25 of 58 steps (43%) done
+Select jobs to execute...
+
+[Thu Dec 23 22:05:29 2021]
+rule summary:
+    input: data/wiki_text_wikititle=Hakodate.txt
+    output: data/summary_wikititle=Hakodate_model=sshleifer/distilbart-cnn-12-6_len=64.csv
+    jobid: 29
+    wildcards: wikititle=Hakodate, model=sshleifer/distilbart-cnn-12-6, max_length=64
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+Terminating processes on user request, this might take some time.
+[Thu Dec 23 22:05:43 2021]
+Error in rule summary:
+    jobid: 29
+    output: data/summary_wikititle=Hakodate_model=sshleifer/distilbart-cnn-12-6_len=64.csv
+    shell:
+        python workflow/summarize.py data/wiki_text_wikititle=Hakodate.txt sshleifer/distilbart-cnn-12-6 64 data/summary_wikititle=Hakodate_model=sshleifer/distilbart-cnn-12-6_len=64.csv
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Complete log: /Users/skojaku-admin/program/code/jp-how-to-use-snakemake/Snakemake応用編2/.snakemake/log/2021-12-23T215914.157899.snakemake.log

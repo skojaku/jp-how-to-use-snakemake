@@ -1,0 +1,35 @@
+Building DAG of jobs...
+Using shell: /usr/local/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                count    min threads    max threads
+---------------  -------  -------------  -------------
+all                    1              1              1
+plot_word_count        1              1              1
+total                  2              1              1
+
+Select jobs to execute...
+
+[Tue Dec 21 00:00:09 2021]
+rule plot_word_count:
+    input: data/word_count.csv
+    output: figs/word_count.pdf
+    jobid: 1
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Tue Dec 21 00:00:12 2021]
+Finished job 1.
+1 of 2 steps (50%) done
+Select jobs to execute...
+
+[Tue Dec 21 00:00:12 2021]
+localrule all:
+    input: figs/word_count.pdf
+    jobid: 0
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+[Tue Dec 21 00:00:12 2021]
+Finished job 0.
+2 of 2 steps (100%) done
+Complete log: /Users/skojaku-admin/program/code/jp-how-to-use-snakemake/.snakemake/log/2021-12-21T000008.739140.snakemake.log

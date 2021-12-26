@@ -1,0 +1,32 @@
+Building DAG of jobs...
+Using shell: /usr/local/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                   count    min threads    max threads
+------------------  -------  -------------  -------------
+all                       1              1              1
+retrieve_wiki_text        3              1              1
+summary                  54              1              1
+total                    58              1              1
+
+Select jobs to execute...
+
+[Thu Dec 23 21:58:44 2021]
+rule summary:
+    input: data/wiki_text_wikititle=Kushiro.txt
+    output: data/summary_wikititle=Kushiro_model=t5-base_len=128.csv
+    jobid: 44
+    wildcards: wikititle=Kushiro, model=t5-base, max_length=128
+    resources: tmpdir=/var/folders/57/9xrg5s891dzfv2s_nfnbj2y40000gq/T
+
+Terminating processes on user request, this might take some time.
+[Thu Dec 23 21:59:06 2021]
+Error in rule summary:
+    jobid: 44
+    output: data/summary_wikititle=Kushiro_model=t5-base_len=128.csv
+    shell:
+        python workflow/summarize.py data/wiki_text_wikititle=Kushiro.txt t5-base 128 data/summary_wikititle=Kushiro_model=t5-base_len=128.csv
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Complete log: /Users/skojaku-admin/program/code/jp-how-to-use-snakemake/Snakemake応用編2/.snakemake/log/2021-12-23T215844.139157.snakemake.log

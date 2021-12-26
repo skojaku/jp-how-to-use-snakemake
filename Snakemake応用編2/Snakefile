@@ -3,14 +3,7 @@ from os.path import join
 #
 # Raw data
 #
-WIKI_PAGE_TITLE = [
-    "Sapporo",
-    "Otaru",
-    "Hakodate",
-    "Asahikawa",
-    "Kushiro",
-    "Shiretoko_Peninsula",
-]
+WIKI_PAGE_TITLE = ["Sapporo","Otaru"]
 
 #
 # Preprocessed data
@@ -25,8 +18,8 @@ SUMMARIZED_TEXT = join(
 # Model & Parameters
 #
 # see https://huggingface.co/models?pipeline_tag=summarization&sort=downloads
-MODEL_LIST = ["t5-base", "t5-small", "sshleifer/distilbart-cnn-12-6"]
-MAX_LENGTH_LIST = [32, 64, 128]  # Length of the summarized text
+MODEL_LIST = ["t5-base", "t5-small"]
+MAX_LENGTH_LIST = [32, 128]  # Length of the summarized text
 
 
 rule all:

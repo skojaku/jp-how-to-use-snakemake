@@ -2,22 +2,22 @@ from os.path import join
 
 
 WIKI_PAGE_TITLE = ["Sapporo", "Otaru", "Hakodate", "Asahikawa", "Kushiro", "Shiretoko_Peninsula"]
-TEXT_DATA = join("data", "wiki_text_data={data}.txt")
-WORD_COUNT_DATA = join("data", "word_count_data={data}.csv")
-WORD_COUNT_FIG = join("figs", "word_count_data={data}.pdf")
+TEXT_DATA = join("data", "wiki_text_wikititle={wikititle}.txt")
+WORD_COUNT_DATA = join("data", "word_count_wikititle={wikititle}.csv")
+WORD_COUNT_FIG = join("figs", "word_count_wikititle={wikititle}.pdf")
 
 
 rule all:
     input:
-        expand(WORD_COUNT_FIG, data=WIKI_PAGE_TITLE)
+        expand(WORD_COUNT_FIG, wikititle=WIKI_PAGE_TITLE)
 
 rule retrieve_wiki_text:
     output:
         TEXT_DATA
     params:
-        data = lambda wildcards:wildcards.data 
+        wikititle = lambda wildcards:wildcards.wikititle
     shell:
-        "python workflow/get-wikipages.py {params.data} {output}"
+        "python workflow/get-wikipages.py {params.wikititle} {output}"
 
 
 rule word_count:

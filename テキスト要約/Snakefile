@@ -3,7 +3,7 @@ from os.path import join
 #
 # Raw data
 #
-WIKI_PAGE_TITLE = ["Sapporo","Otaru"]
+WIKI_PAGE_TITLE = ["Sapporo", "Otaru"]
 
 #
 # Preprocessed data

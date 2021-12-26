@@ -24,4 +24,3 @@ counter = Counter(words)
 df = pd.DataFrame.from_dict(counter, orient="index").reset_index()
 df = df.rename(columns={"index": "word", 0: "count"})
 df.to_csv(output_file, index=False)
-

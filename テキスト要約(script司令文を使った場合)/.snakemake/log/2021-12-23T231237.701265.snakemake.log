@@ -1,3 +1,0 @@
-NameError in line 34 of /Users/skojaku-admin/program/code/jp-how-to-use-snakemake/Snakemake応用編2(改)/Snakefile:
-name 'MAX_LENGTH_LIST' is not defined
-  File "/Users/skojaku-admin/program/code/jp-how-to-use-snakemake/Snakemake応用編2(改)/Snakefile", line 34, in <module>

@@ -1,3 +1,0 @@
-WildcardError in line 38 of /Users/skojaku-admin/program/code/jp-how-to-use-snakemake/Snakemake応用編2/Snakefile:
-No values given for wildcard 'max_length'.
-  File "/Users/skojaku-admin/program/code/jp-how-to-use-snakemake/Snakemake応用編2/Snakefile", line 38, in <module>
